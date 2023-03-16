@@ -1,0 +1,45 @@
+       
+        store 
+		    harga =0
+        	harga_item[] = show:2000, 3000, 5000, 6000, 6500}
+        	menu = kosong
+        	total
+        	diskon
+        	bayar
+        Looping If a = Y; answer.same with(Y) or answer.same with(y)
+        Show :
+        Show 1. Teh Tawar    Rp 2000   
+        Show 2. Teh manis     Rp 3000 
+        Show Masukkan Nomor Item:
+        Put into: input_item
+        Show Masukkan banyaknya Item:
+        Put into: jumlah
+        if input_item equals 1
+        show:
+            menu =  Teh Tawar
+            harga = harga plus harga_item[0] multiplied jumlah
+            total= harga_item[0] multiplied jumlah
+            Show Menu Pesanan Anda : menu plus  jumlahplus Rp. plus total
+        
+        else if input_item equals 2
+        show:
+            menu = Teh Manis 
+            harga = harga plus harga_item[1] multiplied jumlah
+            total= harga_item[1] multiplied jumlah
+         Show Menu Pesanan Anda :  plus menu plus    xplus jumlahplus Rp. plus total 
+        
+		else
+            Show Menu yang anda pilih belum tersedia
+        
+        
+            Show Apakah anda mau memesan lagi? Y/T
+            put into: answer
+            
+        if harga equals 500000 show:diskon = harga multiplied 0.5
+        else if harga more than equal to 200000 show:diskon = harga multiplied 0.35
+        else if harga more than equal to 50000 show:diskon = harga multiplied 0.1
+        else show:diskon same with 0
+        
+        bayar same with harga reduction diskon
+
+        Show total payment sebesar :  Rp. bayar
